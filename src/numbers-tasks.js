@@ -314,15 +314,13 @@ function getSumOfDigits(num) {
  */
 function isPowerOfTwo(num) {
   let ans = num;
-  do {
-    if (ans === 1) {
-      return true;
-    }
+  while (ans !== 1) {
     if (ans % 2 !== 0) {
       return false;
     }
     ans /= 2;
-  } while (true);
+  }
+  return true;
 }
 
 /**
@@ -585,7 +583,7 @@ function getIntegerPartNumber(number) {
  */
 function getSumOfNumbers(...args) {
   let ans = 0;
-  args.forEach(function (item) {
+  args.forEach(function a(item) {
     ans += item;
   });
   return +ans.toFixed(1);
